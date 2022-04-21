@@ -1,0 +1,15 @@
+<div class="shopping-cart-item">
+    <div class="content">
+        <img class="product-img" [src]="item?.image" />
+        <div class="product-name">{{ item?.name }}</div>
+        <div class="product-price">${{ item?.price }}</div>
+
+        <div class="action-list">
+            <button class="button-plus" (click)="add()">+</button>
+            <input [value]="item?.count" disabled class="textfield" type="number">
+            <button class="button-minuse" (click)="sub()" >-</button>
+
+            <button class="button-del" (click)="del(item?.id)">Delete</button>
+        </div>
+    </div>
+</div>
